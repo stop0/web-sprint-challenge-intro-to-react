@@ -30,8 +30,8 @@ const App = () => {
     <div className="App">
       <h1>WANTED</h1>
       <h1>DEAD OR ALIVE</h1>
-      {starwars.map((name) =>
-      <Character starwars={name} className="Header" />
+      {starwars.map((Obj) =>
+      <Character starwars={Obj} className="Header" />
       )}
     </div>
   );
