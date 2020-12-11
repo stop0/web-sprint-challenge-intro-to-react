@@ -11,14 +11,14 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [starwars, setStarWars] = useState([])
+  const [starwarsObj, setStarWarsObj] = useState([])
 
   useEffect(() =>{
     axios
       .get('https://swapi.py4e.com/api/people')
       .then(resp =>{
         console.log(resp.data.results)
-        setStarWars(resp.data.results)
+        setStarWarsObj(resp.data.results)
       })
       .catch(err => {
         console.log(err)
@@ -30,8 +30,8 @@ const App = () => {
     <div className="App">
       <h1>WANTED</h1>
       <h1>DEAD OR ALIVE</h1>
-      {starwars.map((Obj) =>
-      <Character starwars={Obj} className="Header" />
+      {starwarsObj.map((Obj) =>
+      <Character starwarsObj={Obj} className="Header" />
       )}
     </div>
   );

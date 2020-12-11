@@ -23,7 +23,7 @@ const Styledcard = Styled.div`
 
 
 const Character = (props) => {
-    const {name , height, mass, gender, eye_color, skin_color, hair_color,birth_year} = props.starwars
+    const {name , height, mass, gender, eye_color, skin_color, hair_color,birth_year} = props.starwarsObj
     return(
     <div>
     <Styledcard>
