@@ -7,15 +7,18 @@ import Styled from 'styled-components'
 
 
 const Styledcard = Styled.div`
- 
-    color : #ffe7b1;
+    color : #6cac6c;
     padding:1px;
     margin:30px;
-    background-color: #403e44;	
+    background-color: #d3dfe6;	
+    width:30%;
 
     &:hover{
-        background-color :#fbc34a;
-        color:#403e44;
+        background-color :#1b6f20;
+        color:#53abee;
+        text-shadow:2px 2px #6cac6c;
+        
+
     }
 `
 
@@ -23,18 +26,16 @@ const Styledcard = Styled.div`
 
 
 const Character = (props) => {
-    const {name , height, mass, gender, eye_color, skin_color, hair_color,birth_year} = props.starwarsObj
+    const {name , image, gender,species,origin,status} = props.rickmortyObj
     return(
     <div>
     <Styledcard>
         <h1>{name}</h1>
-        <h3>Birth Year : {birth_year}</h3>
-        <h3>Height : {height} cm</h3>
-        <h3>Weight : {mass} kilograms </h3>
-        <h3>Gender : {gender}</h3>
-        <h3>Skin Color : {skin_color}</h3>
-        <h3>Hair Color : {hair_color}</h3>
-        <h3>Eye Color : {eye_color}</h3>
+        <img src={image} alt="picture" />
+        <h3>Gender:  {gender}</h3>
+        <h3>Species: {species}</h3>
+        <h3>Origin: {origin.name}</h3>
+        <h3>Status: {status}</h3>
     </Styledcard>
     </div>
     )
